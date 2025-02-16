@@ -1,0 +1,7 @@
+/virtualenv
+venv
+build
+dist
+Text_to_Speech
+books
+test.ipynb

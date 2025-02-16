@@ -1,0 +1,143 @@
+2025-02-15 04:49:49,482 - uvicorn.error - INFO - Started server process [13060]
+2025-02-15 04:49:49,483 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-15 04:49:49,485 - uvicorn.error - INFO - Application startup complete.
+2025-02-15 04:49:49,487 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-15 04:50:40,156 - uvicorn.error - INFO - Shutting down
+2025-02-15 04:50:40,269 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-15 04:50:40,270 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-15 04:50:40,270 - uvicorn.error - INFO - Finished server process [13060]
+2025-02-15 04:50:40,312 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python311\Lib\asyncio\tasks.py", line 350, in __wakeup
+    self.__step()
+  File "C:\Python311\Lib\asyncio\tasks.py", line 267, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Python311\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+2025-02-15 05:01:02,197 - uvicorn.error - INFO - Started server process [3776]
+2025-02-15 05:01:02,198 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-15 05:01:02,198 - uvicorn.error - INFO - Application startup complete.
+2025-02-15 05:01:02,198 - uvicorn.error - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-02-15 05:01:02,200 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-15 05:01:02,200 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-15 05:01:02,222 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py:68> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 163, in startup
+    server = await loop.create_server(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\asyncio\base_events.py", line 1511, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\asare\Desktop\AIstein\main.py", line 81, in run_server
+    server.run()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python311\Lib\asyncio\tasks.py", line 350, in __wakeup
+    self.__step()
+  File "C:\Python311\Lib\asyncio\tasks.py", line 267, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 85, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 173, in startup
+    sys.exit(1)
+SystemExit: 1
+2025-02-15 05:01:09,794 - uvicorn.error - INFO - Started server process [9160]
+2025-02-15 05:01:09,794 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-15 05:01:09,796 - uvicorn.error - INFO - Application startup complete.
+2025-02-15 05:01:09,796 - uvicorn.error - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-02-15 05:01:09,796 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-15 05:01:09,796 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-15 05:01:09,817 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py:68> exception=SystemExit(1)>
+Traceback (most recent call last):
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 163, in startup
+    server = await loop.create_server(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\asyncio\base_events.py", line 1511, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\asare\Desktop\AIstein\main.py", line 81, in run_server
+    server.run()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python311\Lib\asyncio\tasks.py", line 350, in __wakeup
+    self.__step()
+  File "C:\Python311\Lib\asyncio\tasks.py", line 267, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 85, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\asare\Desktop\AIstein\venv\Lib\site-packages\uvicorn\server.py", line 173, in startup
+    sys.exit(1)
+SystemExit: 1
+2025-02-15 05:03:10,610 - uvicorn.error - INFO - Started server process [13340]
+2025-02-15 05:03:10,611 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-15 05:03:10,612 - uvicorn.error - INFO - Application startup complete.
+2025-02-15 05:03:10,613 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-15 05:04:11,044 - uvicorn.error - INFO - Shutting down
+2025-02-15 05:04:11,154 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-15 05:04:11,154 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-15 05:04:11,154 - uvicorn.error - INFO - Finished server process [13340]
