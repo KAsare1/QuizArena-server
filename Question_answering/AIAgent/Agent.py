@@ -5,6 +5,7 @@ from fastapi import APIRouter, FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List
 import random
+from Question_answering.RoundOne.FundamentalConcepts import QAMLRoundOne
 
 
 AI_agent_app = APIRouter()
@@ -128,7 +129,7 @@ custom_performance = CustomAgentPerformance()
 # ---------------------------
 def generate_answer(question: Question, should_be_correct: bool) -> str:
     if should_be_correct:
-        return question.correct_answer
+        return QAMLRoundOne.convert_latex_to_plain_text(question.correct_answer)
     else:
         if question.calculations_present:
             try:
